@@ -11,10 +11,12 @@ public class StartGui : MonoBehaviour
     public bool Guiswitch;
     public int intensity=0;
     public int KlunkaKonsekvens;
-    
+  
     
 
     private void Start() {
+
+
         XButtonLocation = Screen.width/2;
         Guiswitch = false;
     }
@@ -35,7 +37,6 @@ public class StartGui : MonoBehaviour
             {
                 Guiswitch = true;
                 intensity = 2;
-
             }
 
 
@@ -61,7 +62,8 @@ public class StartGui : MonoBehaviour
                 {
                 KlunkaKonsekvens = 2;
                 }
-           
+
+
         }
     }
 }

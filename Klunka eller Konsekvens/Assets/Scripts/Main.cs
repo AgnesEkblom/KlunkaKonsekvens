@@ -13,22 +13,23 @@ public class Main : MonoBehaviour
     public string[] IntenseKonsekvens;
 
     public int randomCasualKlunka;
+    public int randomCasualKonsekvens;
+    public int randomIntenseKlunka;
+    public int randomIntenseKonsekvens;
+
     public void Awake() {
         SG = GetComponent<StartGui>();
     }
 
-    void Update()
+  void Update()
     {
-        if (SG.intensity == 1)
+        if (Input.GetMouseButtonDown(0))
         {
+            if (SG.intensity==1)
             Casual();
-            
-        }
-        if (SG.intensity == 2)
-        {
+            if (SG.intensity == 2)
             Intense();
         }
-
     }
 
 
@@ -38,14 +39,16 @@ public class Main : MonoBehaviour
         if (SG.KlunkaKonsekvens == 1)
         {
            randomCasualKlunka = Random.Range(0, CasualKlunka.Length);
-            string currentText;
-            texst.text = randomCasualKlunka.ToString();
-            print(texst);
-            SG.KlunkaKonsekvens = 0;
+            
+            print(randomCasualKlunka);
+
         }
         if (SG.KlunkaKonsekvens == 2)
         {
-            print("CasualKonsekvens");
+            randomCasualKonsekvens = Random.Range(0, CasualKonsekvens.Length);
+
+            print(randomCasualKonsekvens);
+
         }
 
 
@@ -54,11 +57,15 @@ public class Main : MonoBehaviour
     {
         if (SG.KlunkaKonsekvens == 1)
         {
+            randomIntenseKlunka = Random.Range(0, IntenseKlunka.Length);
 
+            print(randomIntenseKlunka);
         }
         if (SG.KlunkaKonsekvens == 2)
         {
+            randomIntenseKonsekvens = Random.Range(0, IntenseKonsekvens.Length);
 
+            print(randomIntenseKonsekvens);
         }
     }
 
